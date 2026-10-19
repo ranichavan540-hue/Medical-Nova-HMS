@@ -1,21 +1,77 @@
-<<<<<<< HEAD
-# React + Vite
+# 🏥 MediNova HMS – Hospital Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## 📌 Project Overview
+MediNova HMS is a web-based Hospital Management System designed to simplify hospital administration and improve the management of daily healthcare operations. It provides a user-friendly dashboard to manage patients, doctors, appointments, medical records, and billing information in one place.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🚀 **Click here to view MediNova HMS:**
 
-## React Compiler
+👉 https://medical-nova-hms.onrender.com
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
+- 🔐 Login Page and Create Account Interface
+- 📊 Interactive Hospital Dashboard
+- 🧑‍⚕️ Patient Management – Add, Edit, Delete, and Search Patients
+- 👨‍⚕️ Doctor Management – Maintain Doctor Details
+- 📅 Appointment Management and Status Updates
+- 🩺 Medical Records Management
+- 💳 Billing Management and Receipt Printing
+- 👤 Admin Profile Management
+- 💾 LocalStorage for Saving Data in the Browser
+- 📱 Clean and Responsive User Interface
 
-## Expanding the Oxlint configuration
+## 🛠️ Technologies Used
+- **Frontend:** React.js
+- **Build Tool:** Vite
+- **Programming Language:** JavaScript,html
+- **Styling:** CSS3
+- **Data Storage:** Browser LocalStorage
+- **Deployment:** Render
+- **Version Control:** Git and GitHub
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-=======
-# Medical-Nova-HMS
-Hospital Management System using React
->>>>>>> c8c99edca8affc09ec0a14021e6de3a64c7a3718
+## ⚙️ Installation and Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ranichavan540-hue/Medical-Nova-HMS.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd Medical-Nova-HMS
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## 🎯 Project Objective
+The main objective of MediNova HMS is to provide a simple and organized digital platform for managing essential hospital operations, reducing manual work, and making hospital information easier to access and maintain.
+
+## 🚀 Future Enhancements
+- Secure authentication and user registration
+- Backend API and centralized database integration
+- Role-based access for administrators, doctors, and staff
+- Patient appointment notifications
+- Enhanced reporting and analytics
+
+## 👩‍💻 Developer
+**Rani Chavan**
+
+GitHub: https://github.com/ranichavan540-hue
+
+## 📄 License
+This project is developed for educational and demonstration purposes.
