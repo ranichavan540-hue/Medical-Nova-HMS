@@ -5,6 +5,15 @@ function App() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showCreateAccount, setShowCreateAccount] = useState(false);
+  
+  const [newAccount, setNewAccount] = useState({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: ""
+  });
+
   const [activePage, setActivePage] = useState("Dashboard");
 
   const [searchPatient, setSearchPatient] = useState("");
@@ -1289,13 +1298,117 @@ return (
             <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} required />
             <label>Password</label>
             <input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            
+          
             <button type="submit">Sign In</button>
-          </form>
-          <p className="footer">Secure Hospital Management Platform</p>
+            </form>
+
+            <p style={{ textAlign: "center", marginTop: "15px" }}>
+              Don't have an account?{" "}
+              <button
+                type="button"
+                onClick={() => setShowCreateAccount(true)}
+              >
+                Create Account
+              </button>
+            </p>
+
+            <p className="footer">Secure Hospital Management Platform</p>
+
         </div>
       </div>
     );
   }
+  
+  if (showCreateAccount) {
+    return (
+      <div className="login-container">
+        <div className="login-card">
+          <h2>Create Account</h2>
+          <p>Create your MedCore HMS account</p>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              if (newAccount.password !== newAccount.confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+              }
+
+              if (
+                !newAccount.name.trim() ||
+                !newAccount.email.trim() ||
+                !newAccount.password
+              ) {
+                alert("Please fill all fields.");
+                return;
+              }
+
+              alert("Account form submitted successfully!");
+              setShowCreateAccount(false);
+            }}
+          >
+            <input
+              type="text"
+              placeholder="Full Name"
+              value={newAccount.name}
+              onChange={(e) =>
+                setNewAccount({ ...newAccount, name: e.target.value })
+              }
+              required
+            />
+
+            <input
+              type="email"
+              placeholder="Email"
+              value={newAccount.email}
+              onChange={(e) =>
+                setNewAccount({ ...newAccount, email: e.target.value })
+              }
+              required
+            />
+
+            <input
+              type="password"
+              placeholder="Password"
+              value={newAccount.password}
+              onChange={(e) =>
+                setNewAccount({ ...newAccount, password: e.target.value })
+              }
+              required
+            />
+
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={newAccount.confirmPassword}
+              onChange={(e) =>
+                setNewAccount({
+                  ...newAccount,
+                  confirmPassword: e.target.value
+                })
+              }
+              required
+            />
+
+            <button type="submit">Create Account</button>
+          </form>
+
+          <p>
+            Already have an account?{" "}
+            <button
+              type="button"
+              onClick={() => setShowCreateAccount(false)}
+            >
+              Sign In
+            </button>
+          </p>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <div className="app-layout">
