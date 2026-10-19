@@ -1,4 +1,4 @@
-# 🏥 MediNova HMS – Hospital Management System
+# 🏥 MedicalNova HMS – Hospital Management System
 
 ## 📌 Project Overview
 MediNova HMS is a web-based Hospital Management System designed to simplify hospital administration and improve the management of daily healthcare operations. It provides a user-friendly dashboard to manage patients, doctors, appointments, medical records, and billing information in one place.
